@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B272BF2D24BB77360097882D /* NSSttibutedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */; };
 		B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE7E24BA4DB3001155DE /* AppDelegate.swift */; };
 		B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE8024BA4DB3001155DE /* SceneDelegate.swift */; };
 		B283CE8324BA4DB3001155DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE8224BA4DB3001155DE /* ViewController.swift */; };
 		B283CE8624BA4DB3001155DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B283CE8424BA4DB3001155DE /* Main.storyboard */; };
 		B283CE8824BA4DB5001155DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B283CE8724BA4DB5001155DE /* Assets.xcassets */; };
 		B283CE8B24BA4DB5001155DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B283CE8924BA4DB5001155DE /* LaunchScreen.storyboard */; };
+		B283CE9624BA4F20001155DE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE9524BA4F20001155DE /* ResultViewController.swift */; };
+		B283CEB824BA84A4001155DE /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEB724BA84A4001155DE /* BookManager.swift */; };
+		B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEB924BA8C7D001155DE /* BookData.swift */; };
+		B283CEBC24BA8C99001155DE /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEBB24BA8C99001155DE /* BookModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSttibutedStringExtension.swift; sourceTree = "<group>"; };
 		B283CE7B24BA4DB3001155DE /* Book Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B283CE7E24BA4DB3001155DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B283CE8024BA4DB3001155DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		B283CE8724BA4DB5001155DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B283CE8A24BA4DB5001155DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B283CE8C24BA4DB5001155DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B283CE9524BA4F20001155DE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B283CEB724BA84A4001155DE /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
+		B283CEB924BA8C7D001155DE /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
+		B283CEBB24BA8C99001155DE /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				B283CE7E24BA4DB3001155DE /* AppDelegate.swift */,
 				B283CE8024BA4DB3001155DE /* SceneDelegate.swift */,
-				B283CE8224BA4DB3001155DE /* ViewController.swift */,
-				B283CE8424BA4DB3001155DE /* Main.storyboard */,
+				B283CE9424BA4E61001155DE /* Model */,
+				B283CE9324BA4E52001155DE /* View */,
+				B283CE9224BA4E3A001155DE /* Controller */,
 				B283CE8724BA4DB5001155DE /* Assets.xcassets */,
 				B283CE8924BA4DB5001155DE /* LaunchScreen.storyboard */,
 				B283CE8C24BA4DB5001155DE /* Info.plist */,
 			);
 			path = "Book Finder";
+			sourceTree = "<group>";
+		};
+		B283CE9224BA4E3A001155DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B283CE8224BA4DB3001155DE /* ViewController.swift */,
+				B283CE9524BA4F20001155DE /* ResultViewController.swift */,
+				B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B283CE9324BA4E52001155DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B283CE8424BA4DB3001155DE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B283CE9424BA4E61001155DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B283CEB924BA8C7D001155DE /* BookData.swift */,
+				B283CEBB24BA8C99001155DE /* BookModel.swift */,
+				B283CEB724BA84A4001155DE /* BookManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B272BF2D24BB77360097882D /* NSSttibutedStringExtension.swift in Sources */,
 				B283CE8324BA4DB3001155DE /* ViewController.swift in Sources */,
 				B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */,
+				B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */,
 				B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */,
+				B283CEB824BA84A4001155DE /* BookManager.swift in Sources */,
+				B283CE9624BA4F20001155DE /* ResultViewController.swift in Sources */,
+				B283CEBC24BA8C99001155DE /* BookModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blazeapps.Book-Finder";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blazeapps.BookFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blazeapps.Book-Finder";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blazeapps.BookFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
