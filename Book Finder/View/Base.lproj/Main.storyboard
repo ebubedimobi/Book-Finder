@@ -20,14 +20,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Finder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pzN-yq-yI8">
-                                        <rect key="frame" x="142.5" y="0.0" width="129" height="39"/>
+                                        <rect key="frame" x="142.5" y="0.0" width="129" height="52"/>
                                         <color key="tintColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="Title Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-mm-uS9">
-                                        <rect key="frame" x="0.0" y="113" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="126" width="414" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aIi-AC-q5u">
                                                 <rect key="frame" x="0.0" y="1.5" width="55" height="37"/>
@@ -59,7 +59,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cYX-KP-opC">
-                                        <rect key="frame" x="0.0" y="227" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="240" width="414" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="11b-Aa-QI8">
                                                 <rect key="frame" x="0.0" y="1" width="55" height="37.5"/>
@@ -91,21 +91,21 @@
                                         </subviews>
                                     </stackView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBD-Ie-tyt">
-                                        <rect key="frame" x="153.5" y="304" width="107" height="0.0"/>
+                                        <rect key="frame" x="153.5" y="317" width="107" height="0.0"/>
                                         <color key="tintColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="Title Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is an ISBN?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcF-fv-EHH">
-                                        <rect key="frame" x="114.5" y="341" width="185.5" height="39"/>
+                                        <rect key="frame" x="114.5" y="354" width="185.5" height="51.5"/>
                                         <color key="tintColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="Title Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61c-nO-KPH">
-                                        <rect key="frame" x="0.0" y="454" width="414" height="364"/>
+                                        <rect key="frame" x="0.0" y="479.5" width="414" height="338.5"/>
                                         <string key="text">ISBN is the acronym for International Standard Book Number. This 10 or 13-digit number identifies a specific book, an edition of a book, or a book-like product (such as an audiobook). Since 1970 each published book has a unique ISBN. In 2007, assigned ISBNs changed from 10 digits to 13. It is a more precise way of checking for a book. For more information click here</string>
                                         <color key="textColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -146,7 +146,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-94" y="144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fEw-00-U40">
+            <objects>
+                <viewController id="Vbr-SB-SZ2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJb-fk-7r4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gxX-aV-nbG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxS-X8-iI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="526"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="y74-FU-teY">
@@ -346,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5HU-WJ-Lc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.59420289855075" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1316" y="138"/>
         </scene>
     </scenes>
     <resources>
