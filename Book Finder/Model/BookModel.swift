@@ -21,3 +21,8 @@ struct BookModel {
     
 }
 
+struct BookInfo {
+    var bookArray: [BookModel]?
+    
+}
+

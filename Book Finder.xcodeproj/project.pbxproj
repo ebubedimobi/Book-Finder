@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				B283CE8224BA4DB3001155DE /* ViewController.swift */,
-				B283CE9524BA4F20001155DE /* ResultViewController.swift */,
 				B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */,
+				B283CE9524BA4F20001155DE /* ResultViewController.swift */,
 				B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */,
 			);
 			path = Controller;

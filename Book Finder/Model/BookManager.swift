@@ -9,7 +9,7 @@
 import Foundation
 
 protocol BookManagerDelegate {
-    func didUpdateBooks(_ bookManager: BookManager, bookModel: BookModel)
+    func didUpdateBooks(_ bookManager: BookManager, bookModel: [BookModel])
     func didFailWithError(send errorMessage:String )
 }
 
@@ -71,10 +71,13 @@ struct BookManager {
                     
                     if let bookModel = self.parseJSON(with: safeData){
                         
-                        
+                        print(bookModel[0].bookName ?? "error line 74")
                         
                         self.delegate?.didUpdateBooks(self, bookModel: bookModel)
                     }
+                }
+                else {
+                    print("error line 80")
                 }
             }
             task.resume()
@@ -82,27 +85,31 @@ struct BookManager {
     }
     
     
-    func parseJSON(with bookData: Data) -> BookModel?{
+    func parseJSON(with bookData: Data) -> [BookModel]? {
         
         let decoder = JSONDecoder()
+        var bookArray = [BookModel]()
         
         do{
             let decodedData = try decoder.decode(BookData.self, from: bookData)
             
             
             
-            let bookName = decodedData.items[0].volumeInfo.title
-            let author = decodedData.items[0].volumeInfo.authors?[0] ?? nil
-            let publisher = decodedData.items[0].volumeInfo.publisher
-            let publishedDate = decodedData.items[0].volumeInfo.publishedDate
-            let numPages = decodedData.items[0].volumeInfo.pageCount
-            let averageRating = decodedData.items[0].volumeInfo.averageRating
-            let numBooksFound = decodedData.totalItems
-            let link = decodedData.items[0].volumeInfo.infoLink ?? nil
-            
-            
-            let bookModel = BookModel(bookName: bookName ?? nil, author: author ?? nil, publisher: publisher ?? nil, publishedDate: publishedDate ?? nil, numPages: numPages ?? nil, averageRating: averageRating ?? nil , numBooksFound: numBooksFound , link: link ?? nil)
-            return bookModel
+            for index in 0..<decodedData.items.count{
+                
+                
+                let bookName = decodedData.items[index].volumeInfo.title
+                let author = decodedData.items[index].volumeInfo.authors?[0] ?? nil
+                let publisher = decodedData.items[index].volumeInfo.publisher
+                let publishedDate = decodedData.items[index].volumeInfo.publishedDate
+                let numPages = decodedData.items[index].volumeInfo.pageCount
+                let averageRating = decodedData.items[index].volumeInfo.averageRating
+                let numBooksFound = decodedData.totalItems
+                let link = decodedData.items[index].volumeInfo.infoLink ?? nil
+                
+                bookArray.append(BookModel(bookName: bookName ?? nil, author: author ?? nil, publisher: publisher ?? nil, publishedDate: publishedDate ?? nil, numPages: numPages ?? nil, averageRating: averageRating ?? nil , numBooksFound: numBooksFound , link: link ?? nil))
+            }
+            return bookArray
             
         }catch{
             let errorMessage = "No data found. Try searching for something else"

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     var bookmanager = BookManager()
     
-    var bookInfo: BookModel?
+    var bookInfo: [BookModel]?
     
     
     override func viewDidLoad() {
@@ -52,15 +52,18 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "goToResult"{
-            let resultViewController = segue.destination as! ResultViewController
+  
+            
+        if segue.identifier == "goToSearchResults"{
+            let searchResultViewController = segue.destination as! SearchResultViewController
             
             if let book = self.bookInfo{
                 
-                resultViewController.bookInfo = book
-                
+                searchResultViewController.bookInfo = book
             }
+            
         }
+        
         
     }
 }
@@ -147,9 +150,11 @@ extension ViewController: BookManagerDelegate{
             
             self.searchingInfoLabel.isHidden = true
             
-            self.bookInfo = BookModel(bookName: nil, author: nil, publisher: nil, publishedDate: nil, numPages: nil, averageRating: nil, numBooksFound: nil, link: nil)
+            //self.bookInfo = BookModel(bookName: nil, author: nil, publisher: nil, publishedDate: nil, numPages: nil, averageRating: nil, numBooksFound: nil, link: nil)
             
-            self.performSegue(withIdentifier: "goToResult", sender: self)
+            self.bookInfo = nil
+            
+            self.performSegue(withIdentifier: "goToSearchResults", sender: self)
             
         }
         
@@ -158,7 +163,7 @@ extension ViewController: BookManagerDelegate{
     }
     
     
-    func didUpdateBooks(_ bookManager: BookManager, bookModel: BookModel) {
+    func didUpdateBooks(_ bookManager: BookManager, bookModel: [BookModel]) {
         
         DispatchQueue.main.async {
             
