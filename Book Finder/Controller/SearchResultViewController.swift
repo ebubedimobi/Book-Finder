@@ -99,7 +99,13 @@ extension SearchResultViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.indexPath = indexPath.row
+        
+        self.tableview.deselectRow(at: indexPath, animated: true)
+        
         performSegue(withIdentifier: "goToResult", sender: self)
     }
     
+    
 }
+
+

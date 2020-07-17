@@ -19,6 +19,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var booksFoundLabel: UILabel!
     @IBOutlet weak var linkLabel: UITextView!
     
+    @IBOutlet weak var infoHolderView: UIView!
     
     var viewController = ViewController()
     
@@ -29,7 +30,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        infoHolderView.layer.cornerRadius = infoHolderView.frame.size.height / 10
         bookNameLabel.text = bookInfo?.bookName ?? "Couldn't find book, try researching or using an ISBN code"
         authorLabel.text = bookInfo?.author ?? "|"
         publisherLabel.text = bookInfo?.publisher ?? "|"
@@ -87,7 +88,7 @@ class ResultViewController: UIViewController {
     
     @IBAction func returnButtonPressed(_ sender: UIButton) {
         
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popToRootViewController(animated: true)
         linkLabel.isHidden = false
         
     }
