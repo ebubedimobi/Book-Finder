@@ -142,6 +142,7 @@ extension ViewController: UITextFieldDelegate {
 extension ViewController: BookManagerDelegate{
     
     func didFailWithError(send errorMessage: String) {
+        
         DispatchQueue.main.async{
             
             self.searchingInfoLabel.isHidden = true
@@ -164,7 +165,7 @@ extension ViewController: BookManagerDelegate{
             self.bookInfo = bookModel
             self.searchingInfoLabel.isHidden = true
             
-            self.performSegue(withIdentifier: "goToResult", sender: self)
+            self.performSegue(withIdentifier: "goToSearchResults", sender: self)
         }
         
         

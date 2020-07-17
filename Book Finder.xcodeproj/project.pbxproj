@@ -19,6 +19,8 @@
 		B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEB924BA8C7D001155DE /* BookData.swift */; };
 		B283CEBC24BA8C99001155DE /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEBB24BA8C99001155DE /* BookModel.swift */; };
 		B2B9B00324C10FDC005AF599 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */; };
+		B2B9B00624C11DEF005AF599 /* BookHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9B00424C11DEF005AF599 /* BookHolder.swift */; };
+		B2B9B00724C11DEF005AF599 /* BookHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2B9B00524C11DEF005AF599 /* BookHolder.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B283CEB924BA8C7D001155DE /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 		B283CEBB24BA8C99001155DE /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		B2B9B00424C11DEF005AF599 /* BookHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHolder.swift; sourceTree = "<group>"; };
+		B2B9B00524C11DEF005AF599 /* BookHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHolder.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				B283CE8224BA4DB3001155DE /* ViewController.swift */,
-				B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */,
 				B283CE9524BA4F20001155DE /* ResultViewController.swift */,
+				B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */,
 				B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */,
 			);
 			path = Controller;
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				B283CE8424BA4DB3001155DE /* Main.storyboard */,
+				B2B9B00424C11DEF005AF599 /* BookHolder.swift */,
+				B2B9B00524C11DEF005AF599 /* BookHolder.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B9B00724C11DEF005AF599 /* BookHolder.xib in Resources */,
 				B283CE8B24BA4DB5001155DE /* LaunchScreen.storyboard in Resources */,
 				B283CE8824BA4DB5001155DE /* Assets.xcassets in Resources */,
 				B283CE8624BA4DB3001155DE /* Main.storyboard in Resources */,
@@ -186,6 +193,7 @@
 				B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */,
 				B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */,
 				B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */,
+				B2B9B00624C11DEF005AF599 /* BookHolder.swift in Sources */,
 				B283CEB824BA84A4001155DE /* BookManager.swift in Sources */,
 				B283CE9624BA4F20001155DE /* ResultViewController.swift in Sources */,
 				B283CEBC24BA8C99001155DE /* BookModel.swift in Sources */,
