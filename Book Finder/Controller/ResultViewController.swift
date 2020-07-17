@@ -16,7 +16,6 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var averageRatingLabel: UILabel!
     @IBOutlet weak var publishDateLabel: UILabel!
     @IBOutlet weak var numOfPagesLabes: UILabel!
-    @IBOutlet weak var booksFoundLabel: UILabel!
     @IBOutlet weak var linkLabel: UITextView!
     
     @IBOutlet weak var infoHolderView: UIView!
@@ -51,12 +50,6 @@ class ResultViewController: UIViewController {
         }
         
         
-        if let booksFound = bookInfo?.numBooksFound{
-            booksFoundLabel.text = String(booksFound)
-            
-        }else{
-            booksFoundLabel.text = "|"
-        }
         
         if bookInfo?.link != nil{
             linkLabel.text = "Read Book here"

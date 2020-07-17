@@ -16,7 +16,6 @@ struct BookModel {
     let publishedDate: String?
     let numPages: Int?
     let averageRating: Double?
-    let numBooksFound: Int?
     let link: String?
     
 }

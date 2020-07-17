@@ -104,10 +104,9 @@ struct BookManager {
                 let publishedDate = decodedData.items[index].volumeInfo.publishedDate
                 let numPages = decodedData.items[index].volumeInfo.pageCount
                 let averageRating = decodedData.items[index].volumeInfo.averageRating
-                let numBooksFound = decodedData.totalItems
                 let link = decodedData.items[index].volumeInfo.infoLink ?? nil
                 
-                bookArray.append(BookModel(bookName: bookName ?? nil, author: author ?? nil, publisher: publisher ?? nil, publishedDate: publishedDate ?? nil, numPages: numPages ?? nil, averageRating: averageRating ?? nil , numBooksFound: numBooksFound , link: link ?? nil))
+                bookArray.append(BookModel(bookName: bookName ?? nil, author: author ?? nil, publisher: publisher ?? nil, publishedDate: publishedDate ?? nil, numPages: numPages ?? nil, averageRating: averageRating ?? nil, link: link ?? nil))
             }
             return bookArray
             

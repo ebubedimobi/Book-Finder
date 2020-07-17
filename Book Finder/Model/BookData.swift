@@ -11,7 +11,6 @@ import Foundation
 struct BookData : Codable {
  
     let items: [Items]
-    let totalItems: Int
     
 }
 
