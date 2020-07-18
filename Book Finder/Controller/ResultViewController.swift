@@ -16,7 +16,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var averageRatingLabel: UILabel!
     @IBOutlet weak var publishDateLabel: UILabel!
     @IBOutlet weak var numOfPagesLabes: UILabel!
-    @IBOutlet weak var linkLabel: UITextView!
+    @IBOutlet weak var readBookLabel: UIButton!
     
     @IBOutlet weak var infoHolderView: UIView!
     
@@ -30,6 +30,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         infoHolderView.layer.cornerRadius = infoHolderView.frame.size.height / 10
+        readBookLabel.layer.cornerRadius = readBookLabel.frame.size.height / 3.5
+        
         bookNameLabel.text = bookInfo?.bookName ?? "Couldn't find book, try researching or using an ISBN code"
         authorLabel.text = bookInfo?.author ?? "|"
         publisherLabel.text = bookInfo?.publisher ?? "|"
@@ -52,38 +54,33 @@ class ResultViewController: UIViewController {
         
         
         if bookInfo?.link != nil{
-            linkLabel.text = "Read Book here"
-            updateTextLink()
-            
+            readBookLabel.isHidden = false
         }else {
             
-            linkLabel.isHidden = true
+            readBookLabel.isHidden = true
         }
-        
-        
     }
     
-    func updateTextLink(){
-        
-        let font = linkLabel.font
-        let color = linkLabel.textColor
-        
-        let path = bookInfo?.link ?? ""
-        let text = linkLabel.text ?? ""
-        let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "here")
-        linkLabel.attributedText = attributedString
-        
-        linkLabel.font = font
-        linkLabel.textColor = color
-        
-        
-    }
+    
     
     @IBAction func returnButtonPressed(_ sender: UIButton) {
         
-        navigationController?.popToRootViewController(animated: true)
-        linkLabel.isHidden = false
+       //automatically goes to link view
         
+    }
+    
+    //we send link
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWebView"{
+
+            let WebViewController = segue.destination as! WebViewViewController
+            if let url = self.bookInfo?.link{
+                WebViewController.urlstring = url
+                
+            
+            }
+            
+        }
     }
     
     

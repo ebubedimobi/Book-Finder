@@ -15,7 +15,7 @@ protocol BookManagerDelegate {
 
 struct BookManager {
     let baseBookURL = "https://www.googleapis.com/books/v1/volumes?q="
-    let apiKey = "&key=AIzaSyD_U07gUOT90r1nmkZoSKZjRYJgxRxa94g"
+    
     
     var delegate: BookManagerDelegate?
     
@@ -34,11 +34,12 @@ struct BookManager {
                 
             }
             
-            bookURL = "\(bookURL)\(apiKey)"
+            //Key.apiKey is your api key with "&" behind it
+            bookURL = "\(bookURL)\(Key.apiKey)"
             performRequest(with: bookURL)
             
         }else {
-            let bookURL = "\(baseBookURL)\(name)\(apiKey)"
+            let bookURL = "\(baseBookURL)\(name)\(Key.apiKey)"
             performRequest(with : bookURL )
 
         }
@@ -48,7 +49,7 @@ struct BookManager {
     
     func fetchBookWithISBN(with ISBN: String){
         
-       let bookURL = "\(baseBookURL)isbn:\(ISBN)\(apiKey)"
+        let bookURL = "\(baseBookURL)isbn:\(ISBN)\(Key.apiKey)"
         performRequest(with : bookURL )
         
     }
