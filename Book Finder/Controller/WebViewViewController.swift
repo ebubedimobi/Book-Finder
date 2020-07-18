@@ -20,6 +20,7 @@ class WebViewViewController: UIViewController {
         super.viewDidLoad()
         
         if let safeString = urlstring{
+            print(safeString)
             if let url = URL(string: safeString){
                 let request = URLRequest(url: url)
                 webView.load(request)
