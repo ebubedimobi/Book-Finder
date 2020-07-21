@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="1069.5652173913045" y="18.75"/>
         </scene>
-        <!--Search Result View Controller-->
+        <!--Top Search Results-->
         <scene sceneID="fEw-00-U40">
             <objects>
                 <viewController id="Vbr-SB-SZ2" customClass="SearchResultViewController" customModule="Book_Finder" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,32 +150,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Search Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1y-6d-SCa">
-                                <rect key="frame" x="92.666666666666686" y="19.999999999999996" width="229" height="33.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" name="Title Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Sq-Dq-761">
-                                <rect key="frame" x="0.0" y="63.666666666666686" width="414" height="710.33333333333326"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" name="Background Color"/>
                                 <color key="sectionIndexBackgroundColor" name="Background Color"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0Sq-Dq-761" firstAttribute="top" secondItem="e1y-6d-SCa" secondAttribute="bottom" constant="10" id="LIT-d7-5tN"/>
-                            <constraint firstItem="e1y-6d-SCa" firstAttribute="top" secondItem="gxX-aV-nbG" secondAttribute="top" constant="20" id="frB-e8-chb"/>
+                            <constraint firstItem="0Sq-Dq-761" firstAttribute="top" secondItem="gxX-aV-nbG" secondAttribute="top" id="C1N-zK-kX1"/>
                             <constraint firstItem="gxX-aV-nbG" firstAttribute="trailing" secondItem="0Sq-Dq-761" secondAttribute="trailing" id="g8T-LJ-Yyb"/>
                             <constraint firstItem="0Sq-Dq-761" firstAttribute="leading" secondItem="gxX-aV-nbG" secondAttribute="leading" id="gjs-lT-Ypk"/>
-                            <constraint firstItem="e1y-6d-SCa" firstAttribute="centerX" secondItem="VJb-fk-7r4" secondAttribute="centerX" id="jI3-fM-2KS"/>
                             <constraint firstItem="gxX-aV-nbG" firstAttribute="bottom" secondItem="0Sq-Dq-761" secondAttribute="bottom" id="pVW-7x-AL9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gxX-aV-nbG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CcE-ol-2CH"/>
+                    <navigationItem key="navigationItem" title="Top Search Results" id="CcE-ol-2CH"/>
                     <connections>
-                        <outlet property="infoLabel" destination="e1y-6d-SCa" id="7EI-bt-Sh9"/>
                         <outlet property="tableview" destination="0Sq-Dq-761" id="KIg-yb-ZFq"/>
                         <segue destination="oFw-qy-Pg5" kind="show" identifier="goToResult" id="2We-Gw-Q2Q"/>
                     </connections>

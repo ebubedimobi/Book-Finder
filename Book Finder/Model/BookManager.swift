@@ -24,10 +24,10 @@ struct BookManager {
         if name.contains(" "){
             let array = name.components(separatedBy: " ")
             var bookURL = baseBookURL
-
+            
             for x in 0..<array.count{
                 if x != array.count-1{
-                   bookURL = "\(bookURL)\(array[x])%20"
+                    bookURL = "\(bookURL)\(array[x])%20"
                 }else {
                     bookURL = "\(bookURL)\(array[x])"
                 }
@@ -41,9 +41,9 @@ struct BookManager {
         }else {
             let bookURL = "\(baseBookURL)\(name)\(Key.apiKey)"
             performRequest(with : bookURL )
-
+            
         }
-
+        
         
     }
     
@@ -74,7 +74,10 @@ struct BookManager {
                         
                         print(bookModel[0].bookName ?? "error line 74")
                         
-                        self.delegate?.didUpdateBooks(self, bookModel: bookModel)
+                        DispatchQueue.main.async {
+                            self.delegate?.didUpdateBooks(self, bookModel: bookModel)
+                        }
+                        
                     }
                 }
                 else {

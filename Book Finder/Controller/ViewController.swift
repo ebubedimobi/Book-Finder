@@ -82,6 +82,11 @@ extension ViewController: UITextFieldDelegate {
                 searchingInfoLabel.isHidden = false
                 textFieldShouldEndEdintingforName(textField: searchBookNameLabel)
                 
+                           
+                           
+                           
+                       
+                
             }else {
                 searchBookNameLabel.placeholder = "Type Something"
             }
@@ -106,8 +111,8 @@ extension ViewController: UITextFieldDelegate {
             
             textField.endEditing(true)
             searchingInfoLabel.isHidden = false
-            textFieldShouldEndEdintingforName(textField: textField)
             
+            textFieldShouldEndEdintingforName(textField: textField)
             return true
         }else {
             textField.placeholder = "Type Something"
@@ -171,6 +176,7 @@ extension ViewController: BookManagerDelegate{
             self.searchingInfoLabel.isHidden = true
             
             self.performSegue(withIdentifier: "goToSearchResults", sender: self)
+            
         }
         
         

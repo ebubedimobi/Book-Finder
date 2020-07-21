@@ -12,7 +12,6 @@ class SearchResultViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     
-    @IBOutlet weak var infoLabel: UILabel!
     
     var bookInfo:[BookModel]?
     var indexPath: Int?
@@ -26,11 +25,12 @@ class SearchResultViewController: UIViewController {
             
             //add custom xib TableViewCell
             tableview.register(UINib(nibName: "BookHolder", bundle: nil), forCellReuseIdentifier: "ReuseableCell")
-            
+        
             tableview.reloadData()
         }else {
             
-            infoLabel.text = "No result Found!"
+            navigationItem.title = "No Results Found!"
+            
         }
     }
     
@@ -44,7 +44,7 @@ class SearchResultViewController: UIViewController {
                 if let index = self.indexPath{
                     ResultViewController.bookInfo = book[index]
                 }else {
-                    infoLabel.text = "Error, try again"
+                    navigationItem.title = "No Results Found!"
                     
                 }
                 
