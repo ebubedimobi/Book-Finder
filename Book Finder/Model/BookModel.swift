@@ -17,6 +17,7 @@ struct BookModel {
     let numPages: Int?
     let averageRating: Double?
     let link: String?
+    let imageURL: String?
     
 }
 

@@ -26,5 +26,12 @@ struct VolumeInfo: Codable {
     let pageCount: Int?
     let infoLink: String?
     let averageRating: Double?
+    let imageLinks: ImageLink
+    
+}
+
+struct ImageLink: Codable {
+    
+    let thumbnail: String?
     
 }

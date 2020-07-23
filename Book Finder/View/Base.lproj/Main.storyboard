@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6T3-PB-YjN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m0K-Cm-X5I">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Book_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="3fo-we-Usm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-mm-uS9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -84,14 +84,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is an ISBN?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcF-fv-EHH">
-                                        <rect key="frame" x="114.33333333333333" y="228" width="185.66666666666669" height="41.666666666666686"/>
+                                        <rect key="frame" x="114.33333333333333" y="228" width="185.66666666666669" height="39"/>
                                         <color key="tintColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="Title Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61c-nO-KPH">
-                                        <rect key="frame" x="0.0" y="343.66666666666674" width="414" height="385.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="341" width="414" height="339"/>
                                         <string key="text">ISBN is the acronym for International Standard Book Number. This 10 or 13-digit number identifies a specific book, an edition of a book, or a book-like product (such as an audiobook). Since 1970 each published book has a unique ISBN. In 2007, assigned ISBNs changed from 10 digits to 13. It is a more precise way of checking for a book. For more information click here</string>
                                         <color key="textColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -111,7 +111,7 @@
                                 </constraints>
                             </stackView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBD-Ie-tyt">
-                                <rect key="frame" x="153.66666666666666" y="738" width="106.99999999999997" height="30"/>
+                                <rect key="frame" x="153.66666666666666" y="689" width="106.99999999999997" height="30"/>
                                 <color key="tintColor" name="Title Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" name="Title Color"/>
@@ -129,6 +129,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="book" catalog="system" selectedImage="book.fill" id="zUt-zc-Weh"/>
                     <navigationItem key="navigationItem" title="📖 Book Finder" id="THk-hM-Pcq"/>
                     <connections>
                         <outlet property="moreInfoLabel" destination="61c-nO-KPH" id="gth-Dl-ztx"/>
@@ -140,18 +141,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5652173913045" y="18.75"/>
+            <point key="canvasLocation" x="1979.7101449275365" y="18.75"/>
         </scene>
         <!--Top Search Results-->
         <scene sceneID="fEw-00-U40">
             <objects>
                 <viewController id="Vbr-SB-SZ2" customClass="SearchResultViewController" customModule="Book_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJb-fk-7r4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Sq-Dq-761">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" name="Background Color"/>
                                 <color key="sectionIndexBackgroundColor" name="Background Color"/>
                             </tableView>
@@ -173,18 +174,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxS-X8-iI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="35"/>
+            <point key="canvasLocation" x="2739.130434782609" y="34.821428571428569"/>
         </scene>
         <!--Web View View Controller-->
         <scene sceneID="fFu-4f-tLF">
             <objects>
                 <viewController id="SbA-JN-91H" customClass="WebViewViewController" customModule="Book_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R09-Oo-kMD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypk-k1-vCX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" name="Background Color"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -208,33 +209,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKK-Iy-Yxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3459" y="106"/>
+            <point key="canvasLocation" x="4368.115942028986" y="105.80357142857143"/>
         </scene>
         <!--Book Card-->
         <scene sceneID="y74-FU-teY">
             <objects>
                 <viewController id="oFw-qy-Pg5" customClass="ResultViewController" customModule="Book_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYO-ns-0n5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaS-dn-2n4">
-                                <rect key="frame" x="10" y="10" width="394" height="763"/>
+                                <rect key="frame" x="10" y="10" width="394" height="680"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0NY-lD-UUw">
-                                        <rect key="frame" x="30" y="30" width="334" height="703"/>
+                                        <rect key="frame" x="30" y="30" width="334" height="620"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPb-tV-sYc">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="100.33333333333333"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="88.666666666666671"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book name:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vQO-PS-WNc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="1LO-kE-x2x">
-                                                        <rect key="frame" x="167" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="167" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
@@ -242,16 +243,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-bh-00P">
-                                                <rect key="frame" x="0.0" y="100.33333333333334" width="334" height="100.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="88.666666666666657" width="334" height="88.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="oiV-BL-Cb2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="88.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="75c-7R-yHe">
-                                                        <rect key="frame" x="167" y="0.0" width="167" height="100.66666666666667"/>
+                                                        <rect key="frame" x="167" y="0.0" width="167" height="88.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
@@ -259,16 +260,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hs1-T0-hlv">
-                                                <rect key="frame" x="0.0" y="201" width="334" height="100.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="177" width="334" height="88.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publisher:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="947-ax-A9p">
-                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="TBL-MM-vMd">
-                                                        <rect key="frame" x="167" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="167" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
@@ -276,16 +277,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVN-dF-5nY">
-                                                <rect key="frame" x="0.0" y="301.33333333333331" width="334" height="100.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="265.66666666666669" width="334" height="88.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publish Date:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xuw-t7-nb1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="yoC-7X-kO0">
-                                                        <rect key="frame" x="167" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="167" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
@@ -293,16 +294,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doM-SF-9U9">
-                                                <rect key="frame" x="0.0" y="401.66666666666663" width="334" height="100.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="354.33333333333331" width="334" height="88.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Pages:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="LE3-A3-wtO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="S0x-G0-lJU">
-                                                        <rect key="frame" x="167" y="0.0" width="167" height="100.33333333333333"/>
+                                                        <rect key="frame" x="167" y="0.0" width="167" height="88.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
@@ -310,16 +311,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6T-RV-MFG">
-                                                <rect key="frame" x="0.0" y="502.00000000000006" width="334" height="100.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="443" width="334" height="88.333333333333371"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Rating:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="TZq-2K-vfM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="88.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QLy-1c-quA">
-                                                        <rect key="frame" x="167" y="0.0" width="167" height="100.66666666666667"/>
+                                                        <rect key="frame" x="167" y="0.0" width="167" height="88.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <color key="textColor" name="Title Color"/>
                                                         <nil key="highlightedColor"/>
@@ -327,10 +328,10 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaC-rb-oiY">
-                                                <rect key="frame" x="0.0" y="602.66666666666663" width="334" height="100.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="531.33333333333337" width="334" height="88.666666666666629"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sk-Kp-6TF">
-                                                        <rect key="frame" x="87" y="27" width="160" height="46"/>
+                                                        <rect key="frame" x="87" y="21.333333333333258" width="160" height="46"/>
                                                         <color key="backgroundColor" name="Background Color"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="46" id="EBN-eP-jCR"/>
@@ -386,12 +387,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5HU-WJ-Lc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744.9275362318845" y="-29.464285714285712"/>
+            <point key="canvasLocation" x="3655.0724637681164" y="-29.464285714285712"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="gVf-G5-0A3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6T3-PB-YjN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5HG-wK-rge"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="skT-Jd-5GK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -407,13 +409,50 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXS-pK-qNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226" y="144"/>
+            <point key="canvasLocation" x="1134.7826086956522" y="143.97321428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="69Y-xy-MLM">
+            <objects>
+                <viewController id="qOJ-AJ-4kM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xfy-6V-85m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Cew-Dn-a0A"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="bookmark" catalog="system" selectedImage="bookmark.fill" id="0r6-1s-z36"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOM-GI-3Eg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="863"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cLq-JK-8Rq">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m0K-Cm-X5I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hfw-uH-5GP">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6T3-PB-YjN" kind="relationship" relationship="viewControllers" id="Jx6-4P-Yyl"/>
+                        <segue destination="qOJ-AJ-4kM" kind="relationship" relationship="viewControllers" id="vg3-y5-M5Q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMT-df-OA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.63768115942031" y="143.97321428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="barcode.viewfinder" catalog="system" width="128" height="114"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="Background Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
