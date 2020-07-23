@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1C0796684242011802D7B5B0 /* Pods_Book_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB529B3670A1B07B24D4A2E /* Pods_Book_Finder.framework */; };
 		B272BF2D24BB77360097882D /* NSSttibutedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */; };
+		B27D9B5624C93CC3002A35CA /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */; };
 		B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE7E24BA4DB3001155DE /* AppDelegate.swift */; };
 		B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE8024BA4DB3001155DE /* SceneDelegate.swift */; };
 		B283CE8324BA4DB3001155DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE8224BA4DB3001155DE /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		9F68A9A7485A01E4FFD34B51 /* Pods-Book Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Finder.debug.xcconfig"; path = "Target Support Files/Pods-Book Finder/Pods-Book Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB529B3670A1B07B24D4A2E /* Pods_Book_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSttibutedStringExtension.swift; sourceTree = "<group>"; };
+		B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		B283CE7B24BA4DB3001155DE /* Book Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B283CE7E24BA4DB3001155DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B283CE8024BA4DB3001155DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				B283CE9524BA4F20001155DE /* ResultViewController.swift */,
 				B285C89C24C3989A0051C087 /* WebViewViewController.swift */,
 				B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */,
+				B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,7 +145,6 @@
 				9F68A9A7485A01E4FFD34B51 /* Pods-Book Finder.debug.xcconfig */,
 				4F6910330930847FED652776 /* Pods-Book Finder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -266,6 +268,7 @@
 				B2B9B00324C10FDC005AF599 /* SearchResultViewController.swift in Sources */,
 				B285C89B24C395490051C087 /* Key.swift in Sources */,
 				B283CE8324BA4DB3001155DE /* ViewController.swift in Sources */,
+				B27D9B5624C93CC3002A35CA /* FavouritesViewController.swift in Sources */,
 				B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */,
 				B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */,
 				B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */,
