@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchResultViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class SearchResultViewController: UIViewController {
             
             //add custom xib TableViewCell
             tableview.register(UINib(nibName: "BookHolder", bundle: nil), forCellReuseIdentifier: "ReuseableCell")
-        
+            
             tableview.reloadData()
         }else {
             
@@ -66,8 +67,33 @@ extension SearchResultViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableCell", for: indexPath) as! BookHolder
         
+        if  bookInfo?[indexPath.row].imageURL != nil {
+            
+            var imageURL = bookInfo![indexPath.row].imageURL!
+            imageURL.insert("s", at: imageURL.index(imageURL.startIndex, offsetBy: 4))
+            
+            
+            
+            let url = URL(string: imageURL )
+            
+            let processor = DownsamplingImageProcessor(size: cell.bookImageView.bounds.size) |> RoundCornerImageProcessor(cornerRadius: 19)
+            
+            cell.bookImageView.kf.indicatorType = .activity
+            
+            
+            cell.bookImageView.kf.setImage(
+                with: url,
+                options: [
+                    .processor(processor),
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(0.5)),
+                    .cacheOriginalImage
+            ])
+            
+        }
         
-        cell.bookImageView.image = #imageLiteral(resourceName: "isbn-back-cover-large")
+        
+        
         cell.bookNameLabel.text = bookInfo?[indexPath.row].bookName
         cell.authorNameLabel.text = bookInfo?[indexPath.row].author
         
@@ -80,7 +106,7 @@ extension SearchResultViewController: UITableViewDataSource{
         
     }
     
-
+    
     
     func setStars(with cell: BookHolder ,using averageRating: Double?){
         
@@ -141,17 +167,17 @@ extension SearchResultViewController: UITableViewDataSource{
             cell.star4.image = UIImage(systemName: "star.fill")
             cell.star5.image = UIImage(systemName: "star")
         case 4.0..<5.0 :
-                   cell.star1.image = UIImage(systemName: "star.fill")
-                   cell.star2.image = UIImage(systemName: "star.fill")
-                   cell.star3.image = UIImage(systemName: "star.fill")
-                   cell.star4.image = UIImage(systemName: "star.fill")
-                   cell.star5.image = UIImage(systemName: "star.lefthalf.fill")
+            cell.star1.image = UIImage(systemName: "star.fill")
+            cell.star2.image = UIImage(systemName: "star.fill")
+            cell.star3.image = UIImage(systemName: "star.fill")
+            cell.star4.image = UIImage(systemName: "star.fill")
+            cell.star5.image = UIImage(systemName: "star.lefthalf.fill")
         case 5.0 :
-        cell.star1.image = UIImage(systemName: "star.fill")
-        cell.star2.image = UIImage(systemName: "star.fill")
-        cell.star3.image = UIImage(systemName: "star.fill")
-        cell.star4.image = UIImage(systemName: "star.fill")
-        cell.star5.image = UIImage(systemName: "star.fill")
+            cell.star1.image = UIImage(systemName: "star.fill")
+            cell.star2.image = UIImage(systemName: "star.fill")
+            cell.star3.image = UIImage(systemName: "star.fill")
+            cell.star4.image = UIImage(systemName: "star.fill")
+            cell.star5.image = UIImage(systemName: "star.fill")
         default:
             print("do nothing")
         }

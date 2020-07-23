@@ -61,6 +61,9 @@ class ViewController: UIViewController {
                 
                 searchResultViewController.bookInfo = book
             }
+            else{
+                print("empty array")
+            }
             
         }
         
@@ -81,11 +84,6 @@ extension ViewController: UITextFieldDelegate {
                 searchBookNameLabel.endEditing(true)
                 searchingInfoLabel.isHidden = false
                 textFieldShouldEndEdintingforName(textField: searchBookNameLabel)
-                
-                           
-                           
-                           
-                       
                 
             }else {
                 searchBookNameLabel.placeholder = "Type Something"
@@ -171,7 +169,6 @@ extension ViewController: BookManagerDelegate{
     func didUpdateBooks(_ bookManager: BookManager, bookModel: [BookModel]) {
         
         DispatchQueue.main.async {
-            
             self.bookInfo = bookModel
             self.searchingInfoLabel.isHidden = true
             

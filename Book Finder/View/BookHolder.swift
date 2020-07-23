@@ -22,7 +22,7 @@ class BookHolder: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        bookViewHolder.layer.cornerRadius = bookViewHolder.frame.size.height / 6
+        bookViewHolder.layer.cornerRadius = bookViewHolder.frame.size.height / 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
