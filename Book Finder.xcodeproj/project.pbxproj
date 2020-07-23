@@ -10,6 +10,7 @@
 		1C0796684242011802D7B5B0 /* Pods_Book_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB529B3670A1B07B24D4A2E /* Pods_Book_Finder.framework */; };
 		B272BF2D24BB77360097882D /* NSSttibutedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */; };
 		B27D9B5624C93CC3002A35CA /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */; };
+		B27D9B5924C94028002A35CA /* FavoriteBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D9B5824C94028002A35CA /* FavoriteBooks.swift */; };
 		B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE7E24BA4DB3001155DE /* AppDelegate.swift */; };
 		B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE8024BA4DB3001155DE /* SceneDelegate.swift */; };
 		B283CE8324BA4DB3001155DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CE8224BA4DB3001155DE /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		ADB529B3670A1B07B24D4A2E /* Pods_Book_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSttibutedStringExtension.swift; sourceTree = "<group>"; };
 		B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		B27D9B5824C94028002A35CA /* FavoriteBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooks.swift; sourceTree = "<group>"; };
 		B283CE7B24BA4DB3001155DE /* Book Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B283CE7E24BA4DB3001155DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B283CE8024BA4DB3001155DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 				ADB529B3670A1B07B24D4A2E /* Pods_Book_Finder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B27D9B5724C93FE5002A35CA /* Persistent Data */ = {
+			isa = PBXGroup;
+			children = (
+				B27D9B5824C94028002A35CA /* FavoriteBooks.swift */,
+			);
+			path = "Persistent Data";
 			sourceTree = "<group>";
 		};
 		B283CE7224BA4DB3001155DE = {
@@ -111,10 +121,10 @@
 			children = (
 				B283CE8224BA4DB3001155DE /* ViewController.swift */,
 				B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */,
+				B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */,
 				B283CE9524BA4F20001155DE /* ResultViewController.swift */,
 				B285C89C24C3989A0051C087 /* WebViewViewController.swift */,
 				B272BF2C24BB77360097882D /* NSSttibutedStringExtension.swift */,
-				B27D9B5524C93CC3002A35CA /* FavouritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 				B283CEB924BA8C7D001155DE /* BookData.swift */,
 				B283CEBB24BA8C99001155DE /* BookModel.swift */,
 				B283CEB724BA84A4001155DE /* BookManager.swift */,
+				B27D9B5724C93FE5002A35CA /* Persistent Data */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 				B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */,
 				B2B9B00624C11DEF005AF599 /* BookHolder.swift in Sources */,
 				B283CEB824BA84A4001155DE /* BookManager.swift in Sources */,
+				B27D9B5924C94028002A35CA /* FavoriteBooks.swift in Sources */,
 				B283CE9624BA4F20001155DE /* ResultViewController.swift in Sources */,
 				B285C89D24C3989A0051C087 /* WebViewViewController.swift in Sources */,
 				B283CEBC24BA8C99001155DE /* BookModel.swift in Sources */,

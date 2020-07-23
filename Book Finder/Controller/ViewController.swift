@@ -57,13 +57,15 @@ class ViewController: UIViewController {
         if segue.identifier == "goToSearchResults"{
             let searchResultViewController = segue.destination as! SearchResultViewController
             
+            
+            
             if let book = self.bookInfo{
                 
                 searchResultViewController.bookInfo = book
             }
-            else{
-                print("empty array")
-            }
+//            else{
+//                print("empty array")
+//            }
             
         }
         
@@ -167,6 +169,8 @@ extension ViewController: BookManagerDelegate{
     
     
     func didUpdateBooks(_ bookManager: BookManager, bookModel: [BookModel]) {
+        
+        
         
         DispatchQueue.main.async {
             self.bookInfo = bookModel

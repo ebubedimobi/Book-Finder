@@ -8,5 +8,6 @@ target 'Book Finder' do
   # Pods for Book Finder
 
 pod 'Kingfisher', '~> 5.0'
+pod 'RealmSwift'
 
 end

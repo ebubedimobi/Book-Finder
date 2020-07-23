@@ -14,6 +14,7 @@ protocol BookManagerDelegate {
 }
 
 struct BookManager {
+    
     let baseBookURL = "https://www.googleapis.com/books/v1/volumes?q="
     
     
@@ -109,7 +110,7 @@ struct BookManager {
                 let numPages = decodedData.items[index].volumeInfo.pageCount
                 let averageRating = decodedData.items[index].volumeInfo.averageRating
                 let link = decodedData.items[index].volumeInfo.infoLink ?? nil
-                let imageURL = decodedData.items[index].volumeInfo.imageLinks.thumbnail
+                let imageURL = decodedData.items[index].volumeInfo.imageLinks?.thumbnail
                 
                 bookArray.append(BookModel(bookName: bookName ?? nil, author: author ?? nil, publisher: publisher ?? nil, publishedDate: publishedDate ?? nil, numPages: numPages ?? nil, averageRating: averageRating ?? nil, link: link ?? nil, imageURL: imageURL))
             }

@@ -84,14 +84,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is an ISBN?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcF-fv-EHH">
-                                        <rect key="frame" x="114.33333333333333" y="228" width="185.66666666666669" height="55"/>
+                                        <rect key="frame" x="114.33333333333333" y="228" width="185.66666666666669" height="39"/>
                                         <color key="tintColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="Title Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61c-nO-KPH">
-                                        <rect key="frame" x="0.0" y="357" width="414" height="323"/>
+                                        <rect key="frame" x="0.0" y="341" width="414" height="339"/>
                                         <string key="text">ISBN is the acronym for International Standard Book Number. This 10 or 13-digit number identifies a specific book, an edition of a book, or a book-like product (such as an audiobook). Since 1970 each published book has a unique ISBN. In 2007, assigned ISBNs changed from 10 digits to 13. It is a more precise way of checking for a book. For more information click here</string>
                                         <color key="textColor" name="Title Color"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -155,6 +155,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" name="Background Color"/>
                                 <color key="sectionIndexBackgroundColor" name="Background Color"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vbr-SB-SZ2" id="zpd-dA-zJU"/>
+                                    <outlet property="delegate" destination="Vbr-SB-SZ2" id="9s6-YE-8Wg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -411,49 +415,53 @@
             </objects>
             <point key="canvasLocation" x="1134.7826086956522" y="143.97321428571428"/>
         </scene>
-        <!--Favourites View Controller-->
+        <!--Your Favourites-->
         <scene sceneID="69Y-xy-MLM">
             <objects>
                 <viewController id="qOJ-AJ-4kM" customClass="FavouritesViewController" customModule="Book_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xfy-6V-85m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-c6-0UH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="210" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-c6-0UH">
+                                <rect key="frame" x="0.0" y="56" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <searchBar key="tableFooterView" contentMode="redraw" id="VZC-eG-prJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="qOJ-AJ-4kM" id="JWk-aq-Yh4"/>
-                                    </connections>
-                                </searchBar>
                                 <connections>
                                     <outlet property="dataSource" destination="qOJ-AJ-4kM" id="pND-4V-msf"/>
                                     <outlet property="delegate" destination="qOJ-AJ-4kM" id="IGY-7Z-qgg"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Seach Favourites" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-PM-jf7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qOJ-AJ-4kM" id="Zhk-yw-PCd"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Cew-Dn-a0A" firstAttribute="bottom" secondItem="sGn-c6-0UH" secondAttribute="bottom" id="0QX-Mj-2EG"/>
                             <constraint firstItem="sGn-c6-0UH" firstAttribute="leading" secondItem="Cew-Dn-a0A" secondAttribute="leading" id="3Hf-vb-7bE"/>
                             <constraint firstItem="Cew-Dn-a0A" firstAttribute="trailing" secondItem="sGn-c6-0UH" secondAttribute="trailing" id="7y3-lO-GTl"/>
-                            <constraint firstItem="sGn-c6-0UH" firstAttribute="top" secondItem="Cew-Dn-a0A" secondAttribute="top" id="qMs-Kx-0av"/>
+                            <constraint firstItem="sGn-c6-0UH" firstAttribute="top" secondItem="Lyf-PM-jf7" secondAttribute="bottom" id="9TR-5z-SsL"/>
+                            <constraint firstItem="Lyf-PM-jf7" firstAttribute="leading" secondItem="Cew-Dn-a0A" secondAttribute="leading" id="EI0-VU-9uu"/>
+                            <constraint firstItem="Lyf-PM-jf7" firstAttribute="centerX" secondItem="Xfy-6V-85m" secondAttribute="centerX" id="YYb-jn-x5w"/>
+                            <constraint firstItem="Lyf-PM-jf7" firstAttribute="centerX" secondItem="Xfy-6V-85m" secondAttribute="centerX" id="h3A-VW-HIa"/>
+                            <constraint firstItem="Lyf-PM-jf7" firstAttribute="top" secondItem="Cew-Dn-a0A" secondAttribute="top" id="kxC-he-5oa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cew-Dn-a0A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="bookmark" catalog="system" selectedImage="bookmark.fill" id="0r6-1s-z36"/>
+                    <navigationItem key="navigationItem" title="Your Favourites" id="fv3-Kf-yWP"/>
                     <connections>
-                        <outlet property="searchBar" destination="VZC-eG-prJ" id="zCC-Ds-9Db"/>
+                        <outlet property="searchBar" destination="Lyf-PM-jf7" id="AzL-3E-Pab"/>
                         <outlet property="tableView" destination="sGn-c6-0UH" id="fRW-MR-FQ2"/>
+                        <segue destination="oFw-qy-Pg5" kind="show" identifier="goToResult2" id="xid-r3-QUJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOM-GI-3Eg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="863"/>
+            <point key="canvasLocation" x="1724.6376811594205" y="862.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cLq-JK-8Rq">
@@ -467,14 +475,39 @@
                     </tabBar>
                     <connections>
                         <segue destination="6T3-PB-YjN" kind="relationship" relationship="viewControllers" id="Jx6-4P-Yyl"/>
-                        <segue destination="qOJ-AJ-4kM" kind="relationship" relationship="viewControllers" id="vg3-y5-M5Q"/>
+                        <segue destination="FG1-Ok-V67" kind="relationship" relationship="viewControllers" id="vg3-y5-M5Q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMT-df-OA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="224.63768115942031" y="143.97321428571428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JUJ-D0-MKC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FG1-Ok-V67" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bookmark" catalog="system" selectedImage="bookmark.fill" id="0r6-1s-z36"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Uqb-LK-yMQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qOJ-AJ-4kM" kind="relationship" relationship="rootViewController" id="8Mj-7a-Bdp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuM-AI-O4Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814.49275362318849" y="862.5"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xid-r3-QUJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="barcode.viewfinder" catalog="system" width="128" height="114"/>
         <image name="book" catalog="system" width="128" height="101"/>
