@@ -21,8 +21,8 @@
 		B283CEB824BA84A4001155DE /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEB724BA84A4001155DE /* BookManager.swift */; };
 		B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEB924BA8C7D001155DE /* BookData.swift */; };
 		B283CEBC24BA8C99001155DE /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B283CEBB24BA8C99001155DE /* BookModel.swift */; };
-		B285C89B24C395490051C087 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285C89A24C395490051C087 /* Key.swift */; };
 		B285C89D24C3989A0051C087 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285C89C24C3989A0051C087 /* WebViewViewController.swift */; };
+		B290BD4624C97C3A001D533A /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290BD4524C97C3A001D533A /* Key.swift */; };
 		B2B9B00324C10FDC005AF599 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */; };
 		B2B9B00624C11DEF005AF599 /* BookHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9B00424C11DEF005AF599 /* BookHolder.swift */; };
 		B2B9B00724C11DEF005AF599 /* BookHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2B9B00524C11DEF005AF599 /* BookHolder.xib */; };
@@ -47,8 +47,8 @@
 		B283CEB724BA84A4001155DE /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 		B283CEB924BA8C7D001155DE /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 		B283CEBB24BA8C99001155DE /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
-		B285C89A24C395490051C087 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		B285C89C24C3989A0051C087 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		B290BD4524C97C3A001D533A /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = SOURCE_ROOT; };
 		B2B9B00224C10FDC005AF599 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		B2B9B00424C11DEF005AF599 /* BookHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHolder.swift; sourceTree = "<group>"; };
 		B2B9B00524C11DEF005AF599 /* BookHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHolder.xib; sourceTree = "<group>"; };
@@ -85,7 +85,6 @@
 		B283CE7224BA4DB3001155DE = {
 			isa = PBXGroup;
 			children = (
-				B285C89A24C395490051C087 /* Key.swift */,
 				B283CE7D24BA4DB3001155DE /* Book Finder */,
 				B283CE7C24BA4DB3001155DE /* Products */,
 				DFF9C34255F63E9CB504278B /* Pods */,
@@ -104,6 +103,7 @@
 		B283CE7D24BA4DB3001155DE /* Book Finder */ = {
 			isa = PBXGroup;
 			children = (
+				B290BD4524C97C3A001D533A /* Key.swift */,
 				B283CE7E24BA4DB3001155DE /* AppDelegate.swift */,
 				B283CE8024BA4DB3001155DE /* SceneDelegate.swift */,
 				B283CE9424BA4E61001155DE /* Model */,
@@ -277,12 +277,12 @@
 			files = (
 				B272BF2D24BB77360097882D /* NSSttibutedStringExtension.swift in Sources */,
 				B2B9B00324C10FDC005AF599 /* SearchResultViewController.swift in Sources */,
-				B285C89B24C395490051C087 /* Key.swift in Sources */,
 				B283CE8324BA4DB3001155DE /* ViewController.swift in Sources */,
 				B27D9B5624C93CC3002A35CA /* FavouritesViewController.swift in Sources */,
 				B283CE7F24BA4DB3001155DE /* AppDelegate.swift in Sources */,
 				B283CEBA24BA8C7D001155DE /* BookData.swift in Sources */,
 				B283CE8124BA4DB3001155DE /* SceneDelegate.swift in Sources */,
+				B290BD4624C97C3A001D533A /* Key.swift in Sources */,
 				B2B9B00624C11DEF005AF599 /* BookHolder.swift in Sources */,
 				B283CEB824BA84A4001155DE /* BookManager.swift in Sources */,
 				B27D9B5924C94028002A35CA /* FavoriteBooks.swift in Sources */,
